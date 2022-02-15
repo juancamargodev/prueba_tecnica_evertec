@@ -12,9 +12,11 @@
 
 ##Inicialización del proyecto
 1. ejecute el comando ``composer install``
-2. ejecute  el comando ``php artisan migrate --seed``
-3. efecute el comando ``php -S localhost:8000 -t public``
-4. la página se visalizará en la url [`http://localhost:8000/`](http://localhost:8000/)
+2. cree una copia del archivo ``.env.example``, ingrese las variables de entorno y nómbrelo como ``.env``
+3. ejecute el comando ```php artisan jwt:secret``
+4. ejecute  el comando ``php artisan migrate --seed``
+5. efecute el comando ``php -S localhost:8000 -t public``
+6. la página se visalizará en la url [`http://localhost:8000/`](http://localhost:8000/)
 
 ## Official Documentation
 Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
