@@ -69,7 +69,7 @@ class WebCheckoutService
         $webCheckoutInfo->auth = $this->generateAuthObject($this->generateNonce());
         $webCheckoutInfo->payment = $payment;
         $webCheckoutInfo->allowPartial = false;
-        $webCheckoutInfo->expiration = Carbon::tomorrow()->toIso8601String();
+        $webCheckoutInfo->expiration = Carbon::now()->addDays(2)->toIso8601String();
         $webCheckoutInfo->returnUrl = $request['returnUrl'];
         $webCheckoutInfo->ipAddress = $request['ip'];
         $webCheckoutInfo->userAgent = $this->agent;
